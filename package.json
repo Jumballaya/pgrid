@@ -23,5 +23,8 @@
     "postcss-custom-properties": "^5.0.0",
     "postcss-nested": "^1.0.0",
     "postcss-pseudoelements": "^3.0.0"
+  },
+  "dependencies": {
+    "postcss-import": "^9.0.0"
   }
 }

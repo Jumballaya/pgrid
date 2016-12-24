@@ -11,6 +11,7 @@ var customMedia = require('postcss-custom-media');
 var customProp = require('postcss-custom-properties');
 var nested = require('postcss-nested');
 var pseudoEl = require('postcss-pseudoelements');
+var pcssImport = require('postcss-import');
 
 gulp.task('clean', function() {
   return gulp.src('build/css/*.css', {read: false})
@@ -19,6 +20,7 @@ gulp.task('clean', function() {
 
 gulp.task('css', ['clean'], function() {
   var processors = [
+    pcssImport,
     autoprefixer({browsers: ['last 1 version']}),
     pcssApply,
     csso,
